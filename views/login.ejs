@@ -1,0 +1,53 @@
+<meta name='viewport' content='width=device-width, initial-scale=1' />
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Quizeon</title>
+    <link rel="stylesheet" href="<%=BASE_URL%>css/login.css">
+    <!-- Font Awesome -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="/images/favi-cropped.PNG">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Left Section -->
+        <div class="branding-section">
+            <h1>Welcome Back to Quizeon!</h1>
+            <p>
+                Access thousands of quizzes, challenge your friends, and track your progress.
+                Sign in now to continue testing your knowledge and enhancing your skills!
+            </p>
+        </div>
+
+        <!-- Right Section -->
+        <div class="form-section">
+            <div class="form-container">
+                <h2>Welcome Back!</h2>
+                <form action="/login" method="POST">
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login Now</button>
+                </form>
+                <!-- Register Now Section -->
+                <p class="register-now">
+                    Don't have an account? <a href="<%=BASE_URL%>register">Register now</a>.
+                </p>
+
+                <p class="forgot-password">
+                    Forgot password? <a href="reset.html">Click here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="<%=BASE_URL%>js/login.js"></script>
+
+</html>
