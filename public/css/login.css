@@ -1,0 +1,214 @@
+/* General Styling */
+body {
+    font-family: 'Nunito';
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #87ceeb;
+    /* Sky Blue Background */
+}
+
+/* Container */
+.container {
+    display: flex;
+    width: 80%;
+    height: 80vh;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    /* White for content container */
+}
+
+/* Branding Section */
+.branding-section {
+    flex: 1;
+    background: #6bb8f5;
+    /* Slightly darker blue for branding section */
+    color: #fff;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.branding-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.branding-section p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Form Section */
+.form-section {
+    flex: 1;
+    background: #fff;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.form-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.form-container p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.form-container a {
+    color: #2575fc;
+    text-decoration: none;
+}
+
+.form-container a:hover {
+    text-decoration: underline;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2575fc;
+    box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+}
+
+.btn {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #2575fc;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #1e63d3;
+}
+
+.btn-google {
+    background: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+    margin-top: 1rem;
+}
+
+.btn-google:hover {
+    background: #f5f5f5;
+}
+
+.forgot-password {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* Register Now Styling */
+.register-now {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: #666;
+}
+
+.register-now a {
+    color: #2575fc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-now a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        width: 95%;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    .branding-section {
+        text-align: center;
+        align-items: center;
+        padding: 1.5rem;
+    }
+
+    .branding-section h1 {
+        font-size: 2rem;
+    }
+
+    .branding-section p {
+        font-size: 1rem;
+    }
+
+    .form-section {
+        padding: 1.5rem;
+    }
+
+    .form-container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .branding-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .branding-section p {
+        font-size: 0.9rem;
+    }
+
+    .form-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-container p {
+        font-size: 0.9rem;
+    }
+
+    input {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+}

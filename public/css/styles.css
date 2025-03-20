@@ -1,0 +1,111 @@
+.Custom {
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
+
+@media only screen and (max-width: 390px) {
+    .Custom {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
+
+body {
+    font-family: 'Nunito';
+}
+
+/* Header Styles */
+header {
+    color: black;
+}
+
+header .nav-link {
+    color: #000;
+    /* Changed text color to black for contrast */
+    transition: color 0.3s ease;
+}
+
+header .nav-link:hover {
+    color: #f1c40f;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://static.vecteezy.com/system/resources/previews/006/691/884/non_2x/blue-question-mark-background-with-text-space-quiz-symbol-vector.jpg');
+    background-size: cover;
+    color: white;
+}
+
+.hero p {
+    font-size: 37px;
+    font-weight: bold;
+}
+
+.hero .btn-warning {
+    background-color: #f1c40f;
+    border-color: #f1c40f;
+}
+
+.hero .btn-warning:hover {
+    background-color: #e67e22;
+    border-color: #e67e22;
+}
+
+/* Featured Quizzes */
+.featured-quizzes h2 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.popular-quizzes h2 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.card {
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.play-button {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.play-button:hover {
+    background-color: #2980b9;
+}
+
+/* Popular Quizzes */
+.list-group-item {
+    transition: background-color 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.footer {
+    background: #87ceeb;
+    color: #222;
+    /* Darker shade for footer */
+}
+
+.footer h5 {
+    border-bottom: 2px solid #4caf50;
+    /* Accent color for headings */
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.footer a:hover {
+    color: #4caf50;
+    /* Hover effect for links */
+}
