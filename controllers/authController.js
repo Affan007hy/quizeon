@@ -8,7 +8,7 @@ exports.getRegister = (req, res) => {
 exports.postRegister = async (req, res) => {
   const { name, email, password } = req.body;
   const existingUser = await User.findByEmail(email);
-  
+
   if (existingUser) {
     return res.send("User already exists!");
   }
@@ -34,9 +34,6 @@ exports.postLogin = async (req, res) => {
 };
 
 exports.getDashboard = (req, res) => {
-  if (!req.session.user) {
-    return res.redirect("/login");
-  }
   res.render("dashboard", { user: req.session.user });
 };
 
