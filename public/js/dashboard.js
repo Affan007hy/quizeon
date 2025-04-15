@@ -65,38 +65,38 @@ $(document).ready(function () {
         `);
     });
 
-    $('#quiz-link').click(function () {
-        const quizzesHtml = `
-            <h5>Quizzes</h5>
-            <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">JavaScript Basics</h5>
-                        <small>Easy</small>
-                    </div>
-                    <p class="mb-1">Test your knowledge of JavaScript fundamentals.</p>
-                    <button class="btn btn-sm btn-primary mt-2">Start Quiz</button>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">Web Development</h5>
-                        <small>Medium</small>
-                    </div>
-                    <p class="mb-1">Covers HTML, CSS, and responsive design principles.</p>
-                    <button class="btn btn-sm btn-primary mt-2">Start Quiz</button>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">Networking Essentials</h5>
-                        <small>Hard</small>
-                    </div>
-                    <p class="mb-1">Quiz on computer networks, protocols, and security basics.</p>
-                    <button class="btn btn-sm btn-primary mt-2">Start Quiz</button>
-                </a>
-            </div>
-        `;
-        $('#content').html(quizzesHtml);
-    });
+    // $('#quiz-link').click(function () {
+    //     const quizzesHtml = `
+    //         <h5>Quizzes</h5>
+    //         <div class="list-group">
+    //             <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    //                 <div class="d-flex w-100 justify-content-between">
+    //                     <h5 class="mb-1">JavaScript Basics</h5>
+    //                     <small>Easy</small>
+    //                 </div>
+    //                 <p class="mb-1">Test your knowledge of JavaScript fundamentals.</p>
+    //                 <button class="btn btn-sm btn-primary mt-2">Start Quiz</button>
+    //             </a>
+    //             <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    //                 <div class="d-flex w-100 justify-content-between">
+    //                     <h5 class="mb-1">Web Development</h5>
+    //                     <small>Medium</small>
+    //                 </div>
+    //                 <p class="mb-1">Covers HTML, CSS, and responsive design principles.</p>
+    //                 <button class="btn btn-sm btn-primary mt-2">Start Quiz</button>
+    //             </a>
+    //             <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    //                 <div class="d-flex w-100 justify-content-between">
+    //                     <h5 class="mb-1">Networking Essentials</h5>
+    //                     <small>Hard</small>
+    //                 </div>
+    //                 <p class="mb-1">Quiz on computer networks, protocols, and security basics.</p>
+    //                 <button class="btn btn-sm btn-primary mt-2">Start Quiz</button>
+    //             </a>
+    //         </div>
+    //     `;
+    //     $('#content').html(quizzesHtml);
+    // });
 
 
     $('#history-link').click(function () {
