@@ -1,0 +1,148 @@
+<!-- views/admin/editQuiz.ejs -->
+<div class="container mt-5">
+    <div class="card shadow-lg">
+        <div class="card-header bg-primary text-white">
+            <h2 class="mb-0"><i class="fas fa-edit mr-2"></i>Edit Quiz</h2>
+        </div>
+        <div class="card-body">
+            <form action="/admin/quizzes/update/<%= quiz.id %>" method="POST">
+                <div class="form-group mb-4">
+                    <label for="title" class="font-weight-bold">Quiz Title</label>
+                    <input type="text" class="form-control form-control-lg border-primary" id="title" name="title"
+                        value="<%= quiz.title %>" required placeholder="Enter quiz title">
+                    <small class="form-text text-muted">Make it descriptive and engaging</small>
+                </div>
+
+                <div class="form-group mb-4">
+                    <label for="category" class="font-weight-bold">Category</label>
+                    <select class="form-control border-primary" id="category-select" name="category" required>
+                        <option value="<%= quiz.category %>" selected>
+                            <%= quiz.category %>
+                        </option>
+                        <option value="World History">World History</option>
+                        <option value="Technology">Technology</option>
+                        <option value="Science">Science</option>
+                        <option value="Geography">Geography</option>
+                        <option value="Literature & Books">Literature & Books</option>
+                        <option value="Movies & Hollywood">Movies & Hollywood</option>
+                        <option value="Music & Bands">Music & Bands</option>
+                        <option value="Sports">Sports</option>
+                        <option value="Famous Inventors & Discoveries">Famous Inventors & Discoveries</option>
+                        <option value="Politics & Current Affairs">Politics & Current Affairs</option>
+                        <option value="Mythology">Mythology</option>
+                        <option value="Disney & Animated Movies">Disney & Animated Movies</option>
+                        <option value="Harry Potter & Fantasy Worlds">Harry Potter & Fantasy Worlds</option>
+                        <option value="Marvel & DC Superheroes">Marvel & DC Superheroes</option>
+                        <option value="TV Shows">TV Shows</option>
+                        <option value="K-Pop & Global Music">K-Pop & Global Music</option>
+                        <option value="Video Games">Video Games</option>
+                        <option value="Celebrities & Gossip">Celebrities & Gossip</option>
+                        <option value="Memes & Internet Culture">Memes & Internet Culture</option>
+                        <option value="Comics & Cartoons">Comics & Cartoons</option>
+                        <option value="Awards">Awards</option>
+                        <option value="Space & Astronomy">Space & Astronomy</option>
+                        <option value="Biology & Human Body">Biology & Human Body</option>
+                        <option value="Chemistry & Elements">Chemistry & Elements</option>
+                        <option value="Physics & Laws of Motion">Physics & Laws of Motion</option>
+                        <option value="Artificial Intelligence (AI)">Artificial Intelligence (AI)</option>
+                        <option value="Robotics & Futuristic Tech">Robotics & Futuristic Tech</option>
+                        <option value="Computer Programming">Computer Programming</option>
+                        <option value="Medical & Health Science">Medical & Health Science</option>
+                        <option value="Environmental Science">Environmental Science</option>
+                        <option value="Inventions & Gadgets">Inventions & Gadgets</option>
+                        <option value="Food & Cuisine">Food & Cuisine</option>
+                        <option value="Travel & Tourism">Travel & Tourism</option>
+                        <option value="Fashion & Brands">Fashion & Brands</option>
+                        <option value="Cars & Automobiles">Cars & Automobiles</option>
+                        <option value="Pets & Animals">Pets & Animals</option>
+                        <option value="Art & Paintings">Art & Paintings</option>
+                        <option value="Psychology & Human Behavior">Psychology & Human Behavior</option>
+                        <option value="Riddles & Brain Teasers">Riddles & Brain Teasers</option>
+                        <option value="True or False Challenges">True or False Challenges</option>
+                        <option value="Would You Rather?">Would You Rather?</option>
+                        <option value="Business & Economics">Business & Economics</option>
+                        <option value="Mathematics & Puzzles">Mathematics & Puzzles</option>
+                        <option value="Military & Wars">Military & Wars</option>
+                        <option value="Cryptocurrency & Blockchain">Cryptocurrency & Blockchain</option>
+                        <option value="Ancient Civilizations">Ancient Civilizations</option>
+                        <option value="Languages & Linguistics">Languages & Linguistics</option>
+                        <option value="Religion & Spirituality">Religion & Spirituality</option>
+                        <option value="Law & Constitution">Law & Constitution</option>
+                        <option value="Survival & Extreme Situations">Survival & Extreme Situations</option>
+                        <option value="Unexplained Mysteries">Unexplained Mysteries</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group mb-4">
+                            <label for="time_limit" class="font-weight-bold">Time Limit (minutes)</label>
+                            <input type="number" class="form-control border-primary" id="time_limit" name="time_limit"
+                                value="<%= quiz.time_limit %>" required min="1" max="180">
+                            <small class="form-text text-muted">Between 1-180 minutes</small>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group mb-4">
+                            <label for="num_questions" class="font-weight-bold">Number of Questions</label>
+                            <input type="number" class="form-control border-primary" id="num_questions"
+                                name="num_questions" value="<%= quiz.num_questions %>" required min="1" max="100">
+                            <small class="form-text text-muted">Between 1-100 questions</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mt-4 pt-3 border-top">
+                    <button type="submit" class="btn btn-primary btn-lg mr-3 px-4">
+                        <i class="fas fa-save mr-2"></i>Update Quiz
+                    </button>
+                    <a href="/admin/quizzes" class="btn btn-outline-secondary btn-lg px-4">
+                        <i class="fas fa-times mr-2"></i>Cancel
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    .card {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .card-header {
+        border-radius: 0 !important;
+    }
+
+    .form-control {
+        transition: all 0.3s;
+    }
+
+    .form-control:focus {
+        border-color: #0056b3;
+        box-shadow: 0 0 0 0.2rem rgba(0, 86, 179, 0.25);
+    }
+
+    .btn-primary {
+        background-color: #0056b3;
+        border-color: #004494;
+    }
+
+    .btn-primary:hover {
+        background-color: #004494;
+        border-color: #003875;
+    }
+</style>
+
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<!-- Bootstrap 5 JS Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

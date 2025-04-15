@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Questions - Quiz ID: <%= quizId %></title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .card {
+      border-radius: 10px;
+    }
+    .card-header {
+      border-radius: 10px 10px 0 0 !important;
+    }
+    textarea {
+      min-height: 100px;
+    }
+    .list-group-item {
+      margin-bottom: 10px;
+      border-radius: 5px !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="mb-4 text-primary">Manage Questions - Quiz ID: <%= quizId %></h2>
+
+    <div class="card shadow mb-5">
+      <div class="card-header bg-primary text-white">
+        <h4 class="mb-0">Add New Question</h4>
+      </div>
+      <div class="card-body">
+        <form action="/admin/questions/<%= quizId %>/add" method="POST">
+          <div class="mb-3">
+            <label for="questionText" class="form-label">Question Text</label>
+            <textarea class="form-control" id="questionText" name="question_text" rows="3" required></textarea>
+          </div>
+          
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="optionA" class="form-label">Option A</label>
+              <input type="text" class="form-control" id="optionA" name="option_a" placeholder="Enter option A" required>
+            </div>
+            <div class="col-md-6">
+              <label for="optionB" class="form-label">Option B</label>
+              <input type="text" class="form-control" id="optionB" name="option_b" placeholder="Enter option B" required>
+            </div>
+          </div>
+          
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="optionC" class="form-label">Option C</label>
+              <input type="text" class="form-control" id="optionC" name="option_c" placeholder="Enter option C" required>
+            </div>
+            <div class="col-md-6">
+              <label for="optionD" class="form-label">Option D</label>
+              <input type="text" class="form-control" id="optionD" name="option_d" placeholder="Enter option D" required>
+            </div>
+          </div>
+          
+          <div class="mb-4 col-md-3">
+            <label for="correctOption" class="form-label">Correct Option</label>
+            <select class="form-select" id="correctOption" name="correct_option" required>
+              <option value="" selected disabled>Select correct option</option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+            </select>
+          </div>
+          
+          <button type="submit" class="btn btn-primary px-4">
+            <i class="bi bi-plus-circle"></i> Add Question
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="card shadow mb-5">
+      <div class="card-header bg-secondary text-white">
+        <h4 class="mb-0">Existing Questions</h4>
+      </div>
+      <div class="card-body">
+        <% if (questions.length > 0) { %>
+          <div class="list-group">
+            <% questions.forEach(q => { %>
+              <div class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1"><%= q.question_text %></h5>
+                  <span class="badge bg-success rounded-pill">Correct: <%= q.correct_option %></span>
+                </div>
+                <div class="mt-2">
+                  <span class="text-muted me-2">A) <%= q.option_a %></span>
+                  <span class="text-muted me-2">B) <%= q.option_b %></span>
+                  <span class="text-muted me-2">C) <%= q.option_c %></span>
+                  <span class="text-muted">D) <%= q.option_d %></span>
+                </div>
+                <div class="mt-2">
+                  <a href="/admin/questions/<%= quizId %>/delete/<%= q.id %>" class="btn btn-sm btn-danger">
+                    <i class="bi bi-trash"></i> Delete
+                  </a>
+                </div>
+              </div>
+            <% }) %>
+          </div>
+        <% } else { %>
+          <div class="alert alert-info">
+            No questions found for this quiz. Please add some questions.
+          </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
