@@ -7,6 +7,9 @@ const quizController = require('../controllers/quizController')
 router.get("/", (req, res) => {
   res.render("index", { BASE_URL: "/" });
 });
+router.get("/about", (req, res) => {
+  res.render("aboutus");
+});
 router.get("/register", authController.getRegister);
 router.post("/register", authController.postRegister);
 router.get("/login", authController.getLogin);
