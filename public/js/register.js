@@ -22,9 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         // Validate Password
-        if (password.value.length < 8) {
+        if (password.value.length < 8 && password.value.length > 14) {
             isValid = false;
-            alert("Password must be at least 8 characters long.");
+            alert("Password must be 8 to 14 characters long.");
         }
 
         // Validate Confirm Password
