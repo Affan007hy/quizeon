@@ -40,11 +40,10 @@ The goal of Quizeon is to create a scalable and user-friendly learning platform 
 | Auth & Security| bcrypt (admin auth), input validation |
 | Architecture  | MVC (Model-View-Controller) |
 
----
 
 ## 🗃️ Folder Structure
 
-```
+
 
 quizeon-project/
 │
