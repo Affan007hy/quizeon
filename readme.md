@@ -192,13 +192,13 @@ module.exports = pool;
 npm run dev
 ```
 
-Then visit: [http://localhost:3000](http://localhost:3000)
+Then visit: [http://localhost:5000](http://localhost:5000)
 
 ---
 
 ## 📸 Screenshots
 
-> (Add UI screenshots here if you're applying for a visual/design-related role)
+![Home](public/images/quiz.PNG)
 
 ---
 
@@ -211,18 +211,9 @@ Then visit: [http://localhost:3000](http://localhost:3000)
 * Email/password reset system
 
 ---
-
-## 🔐 Admin Credentials (for testing)
-
-> You can set one secure admin manually in your `users` table with hashed password using bcrypt.
-
----
-
 ## 🙋‍♂️ About the Developer
 
 **Mohammad Affan**
 📘 Diploma in Information Technology
 🔧 Web Development | JavaScript | SQL | Node.js
 🌐 Passionate about creating meaningful software that solves real problems.
-
----
